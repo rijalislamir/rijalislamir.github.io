@@ -34,7 +34,7 @@
       </Transition>
     </div>
 
-    <ul class="flex flex-col gap-2 list-disc">
+    <ul class="flex flex-col gap-2">
       <Transition
         appear
         v-for="(item, i) in menu"
@@ -65,19 +65,19 @@ const route = useRoute();
 const menu = [
   {
     path: "about",
-    text: "find <span class='font-bold'>about</span> me",
+    text: "<span class='mr-3'>&rarr;</span>find <span class='font-bold'>about</span> me",
   },
   {
     path: "projects",
-    text: "see my <span class='font-bold'>projects</span>",
+    text: "<span class='mr-3'>&rarr;</span>see my <span class='font-bold'>projects</span>",
   },
   {
     path: "stacks",
-    text: "<span class='font-bold'>stacks</span> I've used",
+    text: "<span class='mr-3'>&rarr;</span><span class='font-bold'>stacks</span> I've used",
   },
   {
     path: "services",
-    text: "offered <span class='font-bold'>services</span>",
+    text: "<span class='mr-3'>&rarr;</span>offered <span class='font-bold'>services</span>",
   },
 ];
 </script>
