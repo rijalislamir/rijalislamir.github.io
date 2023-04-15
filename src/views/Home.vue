@@ -2,7 +2,7 @@
   <div
     class="absolute inset-x-0 h-screen flex flex-col gap-16 justify-center items-center text-white"
   >
-    <div class="px-8 text-center">
+    <div class="px-8 text-center group">
       <Transition
         appear
         enter-active-class="transition-all duration-1000 delay-1000"
@@ -10,7 +10,11 @@
         enter-to-class="translate-y-0 opacity-100"
       >
         <p class="text-4xl" v-if="route.path === '/'">
-          Hello! 👋
+          Hello!
+          <span
+            class="inline-block origin-bottom-right group-hover:animate-wiggle"
+            >👋</span
+          >
           <span class="whitespace-nowrap">
             I'm <span class="font-semibold">Rijal</span>
           </span>

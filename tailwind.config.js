@@ -19,6 +19,15 @@ module.exports = {
         1900: "1900ms",
         2000: "2000ms",
       },
+      animation: {
+        wiggle: "wiggle .5s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(5deg)" },
+        },
+      },
     },
   },
   plugins: [],
