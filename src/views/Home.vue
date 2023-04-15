@@ -5,12 +5,9 @@
     <div class="px-8 text-center">
       <Transition
         appear
-        enter-from-class="-translate-y-10 opacity-0"
         enter-active-class="transition-all duration-1000 delay-1000"
+        enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
-        leave-from-class="translate-y-0"
-        leave-active-class="transition-all duration-1000"
-        leave-to-class="-translate-y-10"
       >
         <p class="text-4xl" v-if="route.path === '/'">
           Hello! 👋
@@ -22,8 +19,8 @@
 
       <Transition
         appear
-        enter-from-class="-translate-y-10 opacity-0"
         enter-active-class="transition-all duration-1000 delay-900"
+        enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
       >
         <p>
@@ -33,75 +30,50 @@
       </Transition>
     </div>
 
-    <div class="flex flex-col gap-2">
+    <ul class="flex flex-col gap-2 list-disc">
       <Transition
         appear
         v-for="(item, i) in menu"
         :key="i"
-        enter-from-class="-translate-y-10 opacity-0"
         :enter-active-class="`transition-all duration-1000 delay-${
           500 + 300 - i * 100
         }`"
+        enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
-        leave-from-class="translate-y-0"
-        leave-active-class="transition-translate duration-1000"
-        leave-to-class="-translate-y-10"
       >
-        <RouterLink :to="`/${item.path}`">
-          <div v-html="item.text"></div>
+        <RouterLink :to="`/${item.path}`" class="mr-auto">
+          <li class="group transition">
+            <p v-html="item.text"></p>
+            <span
+              class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"
+            ></span>
+          </li>
         </RouterLink>
       </Transition>
-    </div>
+    </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-const menu = ref();
-
-watchEffect(() => {
-  menu.value = [
-    {
-      path: "about",
-      text: "find <span class='font-bold'>about</span> me",
-      show: route.path === "/",
-    },
-    {
-      path: "projects",
-      text: "see my <span class='font-bold'>projects</span>",
-      show: route.path === "/",
-    },
-    {
-      path: "stacks",
-      text: "<span class='font-bold'>stacks</span> I've used",
-      show: route.path === "/",
-    },
-    {
-      path: "services",
-      text: "offered <span class='font-bold'>services</span>",
-      show: route.path === "/",
-    },
-  ];
-});
-// const menu = [
-//   {
-//     path: "about",
-//     text: "find <span class='font-bold'>about</span> me",
-//   },
-//   {
-//     path: "projects",
-//     text: "see my <span class='font-bold'>projects</span>",
-//   },
-//   {
-//     path: "stacks",
-//     text: "<span class='font-bold'>stacks</span> I've used",
-//   },
-//   {
-//     path: "services",
-//     text: "offered <span class='font-bold'>services</span>",
-//   },
-// ];
+const menu = [
+  {
+    path: "about",
+    text: "find <span class='font-bold'>about</span> me",
+  },
+  {
+    path: "projects",
+    text: "see my <span class='font-bold'>projects</span>",
+  },
+  {
+    path: "stacks",
+    text: "<span class='font-bold'>stacks</span> I've used",
+  },
+  {
+    path: "services",
+    text: "offered <span class='font-bold'>services</span>",
+  },
+];
 </script>
