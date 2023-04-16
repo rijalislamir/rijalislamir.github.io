@@ -1,25 +1,27 @@
 <template>
-  <div
-    class="absolute inset-x-0 h-screen flex flex-col justify-center items-center text-white"
+  <Transition
+    appear
+    enter-active-class="transition-opacity duration-500 delay-500"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
   >
-    <h1>About</h1>
-    <p class="px-8 text-justify">
-      My name is Rijal Islami. I'm from Indonesia. I have bachelor in Electrical
-      Engineering. I have been learning programming since college in 2015, but
-      for web development I just started it in 2020. For work experience, I have
-      2+ years experience in web development. Currently I have a full-time job,
-      but if you have a project to be worked on together, we can discuss about
-      it.
-    </p>
+    <div class="text-white mt-16">
+      <p class="p-8 pt-20 text-justify">
+        My name is Rijal Islami. I'm from Indonesia. I have bachelor in
+        Electrical Engineering. I have been learning programming since college
+        in 2015, but for web development I just started it in 2020. For work
+        experience, I have 2+ years experience in web development. Currently I
+        have a full-time job, but if you have a project to be worked on
+        together, we can discuss about it.
+      </p>
 
-    <button
-      type="button"
-      class="bg-blue-600 py-3 px-4 rounded-md outline-none outline-0 focus:ring-4"
-      @click="() => alert('Sorry not found')"
-    >
-      download my resume
-    </button>
-  </div>
+      <ul class="px-8">
+        <li><span class="mr-3">&rarr;</span>LinkedIn</li>
+        <li><span class="mr-3">&rarr;</span>Email</li>
+        <li><span class="mr-3">&rarr;</span>Resume</li>
+      </ul>
+    </div>
+  </Transition>
 </template>
 
 <script setup lang="ts">

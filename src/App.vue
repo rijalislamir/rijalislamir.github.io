@@ -1,11 +1,8 @@
 <template>
-  <Navbar />
-
-  <div class="min-h-screen">
-    <RouterView v-slot="{ Component, route }">
-      <component :is="Component" :key="route.path" />
-    </RouterView>
-  </div>
+  <RouterView v-slot="{ Component, route }">
+    <Navbar :name="route.name" />
+    <component :is="Component" :key="route.path" />
+  </RouterView>
 </template>
 
 <script setup lang="ts">
