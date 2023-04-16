@@ -2,12 +2,12 @@
   <header class="fixed inset-x-8 top-6 text-white overflow-hidden z-50">
     <Transition
       appear
-      enter-from-class="-translate-y-10"
-      enter-active-class="transition-translate duration-1000"
+      enter-from-class="-translate-y-full"
+      enter-active-class="transition-translate duration-500"
       enter-to-class="translate-y-0"
       leave-from-class="translate-y-0"
-      leave-active-class="transition-translate duration-1000"
-      leave-to-class="-translate-y-10"
+      leave-active-class="transition-translate duration-500"
+      leave-to-class="-translate-y-full"
     >
       <div class="flex justify-between">
         <span @click="() => router.push('/')" class="cursor-pointer font-bold">
