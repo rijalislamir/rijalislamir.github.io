@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-x-0 top-6 bg-black text-white overflow-hidden z-50"
+    class="fixed inset-x-0 top-0 pt-6 bg-black text-white overflow-hidden z-50"
   >
     <nav class="px-8">
       <Transition
@@ -34,11 +34,7 @@
       enter-active-class="transition-all duration-500"
       enter-to-class="translate-y-0"
     >
-      <div
-        v-if="name !== 'Home'"
-        class="overflow-hidden"
-        :class="{ 'border-b-2': name !== 'Home' }"
-      >
+      <div v-if="name !== 'Home'" class="overflow-hidden">
         <Transition
           appear
           enter-from-class="translate-x-full"

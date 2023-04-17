@@ -5,7 +5,9 @@
     <div class="px-8 text-center group">
       <Transition
         appear
-        enter-active-class="transition-all duration-500 delay-500"
+        :enter-active-class="`transition-all duration-500 delay-${
+          (menu.length + 1) * 100
+        }`"
         enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
       >
@@ -23,7 +25,9 @@
 
       <Transition
         appear
-        enter-active-class="transition-all duration-500 delay-400"
+        :enter-active-class="`transition-all duration-500 delay-${
+          (menu.length + 0) * 100
+        }`"
         enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
       >
@@ -40,7 +44,7 @@
         v-for="(item, i) in menu"
         :key="i"
         :enter-active-class="`transition-all duration-500 delay-${
-          300 - i * 100
+          (Number(menu.length) - i - 1) * 100
         }`"
         enter-from-class="-translate-y-10 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
