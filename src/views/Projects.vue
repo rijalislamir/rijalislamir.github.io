@@ -50,6 +50,24 @@
   <div v-else class="text-white mt-36 overflow-hidden mx-8 mb-8 text-center">
     Not Found
   </div>
+
+  <div
+    v-if="route.params.title"
+    class="text-white mx-8 py-4 border-t-2 flex justify-between"
+  >
+    <div
+      class="cursor-pointer"
+      @click="
+        () => router.push(`/projects/${nextProject(route.params.title)?.param}`)
+      "
+    >
+      <span v-if="nextProject(route.params.title)?.param === projects[0].param">
+        Back to Start
+      </span>
+      <span v-else>Next Project</span>
+    </div>
+    <div>{{ nextProject(route.params.title)?.title }}</div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -77,7 +95,14 @@ const projects = [
   {
     param: "pauli-test",
     title: "Pauli Test",
-    stacks: ["react", "tailwind"],
   },
 ];
+
+const nextProject = (search: string | string[]) => {
+  if (typeof search !== "string") return;
+  const index = projects.findIndex(({ param }) => param === search) + 1;
+
+  if (index === -1 || index === projects.length) return projects[0];
+  return projects[index];
+};
 </script>
