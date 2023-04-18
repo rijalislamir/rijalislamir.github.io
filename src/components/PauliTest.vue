@@ -1,0 +1,52 @@
+<template>
+  <div class="text-white mt-36 overflow-hidden mx-8 mb-8">
+    <div class="pb-8">
+      <table class="w-full">
+        <tbody>
+          <tr>
+            <td class="font-bold py-2">DEMO</td>
+            <td class="py-2">
+              <a
+                href="https://portfolio-pauli-test.netlify.app/"
+                target="_blank"
+              >
+                &nearr; Open
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="font-bold py-2">YEAR</td>
+            <td class="py-2">2022</td>
+          </tr>
+          <tr>
+            <td class="font-bold py-2 align-top">STACKS</td>
+            <td class="py-2">
+              <div class="flex flex-col">
+                <span>React</span>
+                <span>Tailwind</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="pb-8">
+      Pauli test is a test to measure the speed, accuracy, consistency, and
+      endurance of someone when computes a simple summation mathematical problem
+      then interprets it into a measure of the personality of a person
+      undergoing a test. Quoted from this
+      <a
+        href="https://osf.io/ty326/download#:~:text=This%20test%20is%20now%20called,a%20person%20undergoing%20a%20test."
+        class="underline"
+      >
+        document</a
+      >.
+    </p>
+
+    <p class="pb-8">
+      I used to face this test when I was applying for a job. So this app goal
+      is to help me to practice it.
+    </p>
+  </div>
+</template>
