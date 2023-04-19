@@ -5,9 +5,14 @@
         <tbody>
           <tr>
             <td class="font-bold py-2">DEMO</td>
-            <td class="py-2">
+            <td class="py-2 flex">
               <a href="https://portfolio-laundry.netlify.app/" target="_blank">
-                &nearr; Open
+                <p class="group transition cursor-pointer">
+                  &nearr; Open
+                  <span
+                    class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"
+                  ></span>
+                </p>
               </a>
             </td>
           </tr>

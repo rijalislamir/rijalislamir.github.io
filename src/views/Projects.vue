@@ -56,7 +56,7 @@
     class="text-white mx-8 py-4 border-t-2 flex justify-between"
   >
     <div
-      class="cursor-pointer"
+      class="cursor-pointer group transition"
       @click="
         () => router.push(`/projects/${nextProject(route.params.title)?.param}`)
       "
@@ -65,12 +65,39 @@
         Back to Start
       </span>
       <span v-else>Next Project</span>
+      <span
+        class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"
+      ></span>
     </div>
-    <div>{{ nextProject(route.params.title)?.title }}</div>
+    <div class="font-bold">{{ nextProject(route.params.title)?.title }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
+// <div
+//     v-if="route.params.title"
+//     class="text-white mx-8 py-4 border-t-2 flex justify-between"
+//   >
+//     <!-- <div
+//       class="cursor-pointer"
+//       @click="
+//         () => router.push(`/projects/${nextProject(route.params.title)?.param}`)
+//       "
+//     > -->
+//     <!-- <RouterLink :to="`/projects/${nextProject(route.params.title)?.param}`"> -->
+//     <div class="group transition">
+//       <span v-if="nextProject(route.params.title)?.param === projects[0].param">
+//         Back to Start
+//       </span>
+//       <span v-else>Next Project</span>
+//       <span
+//         class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"
+//       ></span>
+//     </div>
+//     <!-- </RouterLink> -->
+//     <!-- </div> -->
+//     <div>{{ nextProject(route.params.title)?.title }}</div>
+//   </div>
 import { useRoute, useRouter } from "vue-router";
 import SocialChat from "../components/SocialChat.vue";
 import Laundry from "../components/Laundry.vue";
