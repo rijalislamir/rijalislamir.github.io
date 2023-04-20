@@ -47,12 +47,39 @@
     </p>
 
     <div class="pb-8 text-center">
-      <h1 class="font-bold text-xl mb-2">Desktop</h1>
-      <img :src="TodoList" alt="todo-list" />
+      <h1 class="font-bold text-xl mb-2">Home (Empty Todo)</h1>
+      <img :src="TodoListHomeEmptyTodo" alt="todo-list-home-empty-todo" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Home</h1>
+      <img :src="TodoListHome" alt="todo-list-home" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Todo (Empty Activity)</h1>
+      <img
+        :src="TodoListTodoEmptyActivity"
+        alt="todo-list-todo-empty-activity"
+      />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Add Activity</h1>
+      <img :src="TodoListAddActivity" alt="todo-list-add-activity" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Todo</h1>
+      <img :src="TodoListTodo" alt="todo-list-todo" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import TodoList from "../assets/todo-list.png";
+import TodoListHomeEmptyTodo from "../assets/todo-list-home-empty-todo.png";
+import TodoListHome from "../assets/todo-list-home.png";
+import TodoListTodoEmptyActivity from "../assets/todo-list-todo-empty-activity.png";
+import TodoListAddActivity from "../assets/todo-list-add-activity.png";
+import TodoListTodo from "../assets/todo-list-todo.png";
 </script>

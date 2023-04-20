@@ -58,10 +58,12 @@
       <h1 class="font-bold text-xl mb-2">Home</h1>
       <img :src="PauliTestHome" alt="pauli-test-home" />
     </div>
+
     <div class="pb-8 text-center">
       <h1 class="font-bold text-xl mb-2">Main</h1>
       <img :src="PauliTestMain" alt="pauli-test-main" />
     </div>
+
     <div class="pb-8 text-center">
       <h1 class="font-bold text-xl mb-2">Result</h1>
       <img :src="PauliTestResult" alt="pauli-test-result" />
