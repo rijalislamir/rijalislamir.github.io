@@ -53,5 +53,24 @@
       I used to face this test when I was applying for a job. So this app goal
       is to help me to practice it.
     </p>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Home</h1>
+      <img :src="PauliTestHome" alt="pauli-test-home" />
+    </div>
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Main</h1>
+      <img :src="PauliTestMain" alt="pauli-test-main" />
+    </div>
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Result</h1>
+      <img :src="PauliTestResult" alt="pauli-test-result" />
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import PauliTestHome from "../assets/pauli-test-home.png";
+import PauliTestMain from "../assets/pauli-test-main.png";
+import PauliTestResult from "../assets/pauli-test-result.png";
+</script>

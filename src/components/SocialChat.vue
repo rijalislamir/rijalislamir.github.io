@@ -48,5 +48,38 @@
     <p class="pb-8">
       You can find online users and start the conversation with them.
     </p>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Login</h1>
+      <img :src="SocialChatLogin" alt="social-chat-login" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Register</h1>
+      <img :src="SocialChatRegister" alt="social-chat-register" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Home</h1>
+      <img :src="SocialChatHome" alt="social-chat-home" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Conversation</h1>
+      <img :src="SocialChatConversation" alt="social-chat-conversation" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Profile</h1>
+      <img :src="SocialChatProfile" alt="social-chat-profile" />
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import SocialChatLogin from "../assets/social-chat-login.png";
+import SocialChatRegister from "../assets/social-chat-register.png";
+import SocialChatHome from "../assets/social-chat-home.png";
+import SocialChatConversation from "../assets/social-chat-conversation.png";
+import SocialChatProfile from "../assets/social-chat-profile.png";
+</script>

@@ -45,5 +45,14 @@
       And also I was provided a backend API to store/manage the todos that will
       be created/deleted.
     </p>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Desktop</h1>
+      <img :src="TodoList" alt="todo-list" />
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import TodoList from "../assets/todo-list.png";
+</script>

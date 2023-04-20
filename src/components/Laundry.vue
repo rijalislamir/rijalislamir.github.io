@@ -42,5 +42,20 @@
       I built the app using Vue 3 and there is no backend integration. For CSS
       styling, I used tailwind.
     </p>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Desktop</h1>
+      <img :src="LaundryDesktop" alt="laundry-desktop" />
+    </div>
+
+    <div class="pb-8 text-center">
+      <h1 class="font-bold text-xl mb-2">Mobile</h1>
+      <img :src="LaundryMobile" alt="laundry-mobile" />
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import LaundryDesktop from "../assets/laundry-desktop.png";
+import LaundryMobile from "../assets/laundry-mobile.png";
+</script>
