@@ -9,7 +9,7 @@
       enter-to-class="opacity-100 translate-y-0"
     >
       <p class="p-8 pt-0">
-        This is the stacks that I have used for building an app:
+        These are the stacks that I have used for building an app:
       </p>
     </Transition>
 
